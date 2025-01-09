@@ -9,6 +9,11 @@ Below are the steps:
 5. build the docker image (name as an example): $ docker build -t dltviewer:2.25 .
 6. load the FUSE (Filesystem in Userspace) kernel module:$ sudo modprobe fuse
 7. Allow the Docker container to access the X11 display:$ xhost +local:docker
-8. Run the container: $ docker run -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix dltviewer:2.25
-9. Inside the container to start the APP: /app# ./DLTViewer-2.25.0-STABLE-qt5.12.10-r960_x86_64-linux-gnu_11.4.0.AppImage
+8. Run the container to start the APP: $ docker run --rm  -it --privileged -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix dltviewer:2.25
+
+** Steps 6-8 can also be done using the start script: 
+(Terminal at the file path of the downloaded start script) 
+Make it executable: $ chmod +x DLTViewer_2.25_Start_Docker.sh
+Run the script: sudo ./DLTViewer_2.25_Start_Docker.sh
+
  
