@@ -35,5 +35,5 @@ COPY . /app
 RUN chmod +x /app/DLTViewer-2.25.0-STABLE-qt5.12.10-r960_x86_64-linux-gnu_11.4.0.AppImage
 
 # Command to start the AppImage when running the container
-# CMD ["/app/DLTViewer-2.25.0-STABLE-qt5.12.10-r960_x86_64-linux-gnu_11.4.0.AppImage"]
+CMD ["/app/DLTViewer-2.25.0-STABLE-qt5.12.10-r960_x86_64-linux-gnu_11.4.0.AppImage"]
 
